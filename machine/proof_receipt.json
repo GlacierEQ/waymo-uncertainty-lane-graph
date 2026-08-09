@@ -2,27 +2,30 @@
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
   "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
-  "proof_id": "wave-a-residual-waymo-uncertainty-lane-graph-1786260727",
+  "proof_id": "wave-a-residual-green-waymo-uncertainty-lane-graph-1786261245",
   "environment": {
-    "python": "3.9.6"
+    "python": "3.9.6",
+    "PYTHONPATH": "."
   },
   "tests": [
-    "unittest discover -s tests -v (x2)"
+    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
-    "dual_run_ok": true
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
   },
   "result": "PASS",
   "limitations": [
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T07:32Z",
+  "timestamp": "2026-08-09T07:40Z",
   "artifact_hashes": {
-    "operability_receipt": "199b83a6c047d9e9e5b81d89bb2da34d7454cd2000bed56b7568173d5b8a3e07"
-  }
+    "operability_receipt": "65794d4b5967e07b35c54326bd25b009d58b4017145c9626243422ebfe72a4a2"
+  },
+  "scratch_proof_log": "wave_a/waymo-uncertainty-lane-graph/proof.log"
 }

@@ -1,7 +1,7 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
-  "at": "2026-08-09T07:32Z",
+  "at": "2026-08-09T07:40Z",
   "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
   "entry": "scripts/operate.py",
   "primary_output": {
@@ -14,5 +14,6 @@
     "unknown_refused": true
   },
   "dual_run_ok": true,
-  "result": "PASS"
+  "result": "PASS",
+  "scratch_launch_log": "wave_a/waymo-uncertainty-lane-graph/launch.log"
 }
