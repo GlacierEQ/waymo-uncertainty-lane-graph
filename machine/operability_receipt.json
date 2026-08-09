@@ -1,0 +1,18 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+  "at": "2026-08-09T07:32Z",
+  "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "ok": true,
+    "path_when_allowed": [
+      "A",
+      "B",
+      "C"
+    ],
+    "unknown_refused": true
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}

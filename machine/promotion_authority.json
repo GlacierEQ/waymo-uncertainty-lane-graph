@@ -1,0 +1,10 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+  "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
+  "proof_receipt_digest": "dfbc556b3466df30d275916fd5895d653ff14985f0fabb5fc5619e26521c7d71",
+  "not_after": 1786347127.216716,
+  "mac": "5f3ae1c37fa719f3693368610a159304c0675c5e69f9e5200973ac8efb44338f",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true
+}

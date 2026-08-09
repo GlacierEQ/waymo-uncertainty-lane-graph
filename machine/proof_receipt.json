@@ -1,0 +1,28 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+  "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
+  "proof_id": "wave-a-residual-waymo-uncertainty-lane-graph-1786260727",
+  "environment": {
+    "python": "3.9.6"
+  },
+  "tests": [
+    "unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-09T07:32Z",
+  "artifact_hashes": {
+    "operability_receipt": "199b83a6c047d9e9e5b81d89bb2da34d7454cd2000bed56b7568173d5b8a3e07"
+  }
+}
