@@ -1,1 +1,23 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.capability-surface.v1",
+  "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+  "capabilities": [
+    "tri_state_directed_topology",
+    "conflicting_edge_state_refusal",
+    "idempotent_exact_edge_declaration",
+    "default_unknown_edge_refusal",
+    "blocked_edge_absolute_refusal",
+    "deterministic_equal_hop_route_selection",
+    "least_uncertain_route_policy",
+    "topology_fingerprint",
+    "evidence_bound_path_decision_receipt",
+    "python_go_route_outcome_parity"
+  ],
+  "truth_boundary": "The repository reasons over supplied topology only. It does not certify freespace, authenticate map/sensor provenance, plan or actuate a production autonomous-driving system, or establish Waymo affiliation/adoption.",
+  "relationship_boundary": {
+    "GlacierEQ/waymo-phantom-freespace-certificate": {
+      "relationship": "complementary bounded-grid freespace specialist",
+      "integration_exercised": false
+    }
+  }
+}
