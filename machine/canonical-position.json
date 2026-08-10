@@ -1,0 +1,45 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "Waymo",
+  "canonical_identity": "uncertainty-lane-graph",
+  "unique_value": [
+    "explicit FREE/UNKNOWN/BLOCKED lane-edge semantics",
+    "default refusal to traverse UNKNOWN topology",
+    "repository-native adversarial uncertainty tests",
+    "cold-start operability and SHA-bound proof receipts"
+  ],
+  "capability_contribution": {
+    "family": "uncertainty_aware_topology",
+    "extractable_mechanisms": [
+      "tri-state topology semantics",
+      "fail-closed unknown-edge routing",
+      "uncertainty-specific adversarial proof pattern"
+    ],
+    "ownership": "This repository remains the owning company-specific implementation unless a later evidence-backed canonical decision explicitly changes ownership."
+  },
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
+  "next_evolution": "Deepen uncertainty propagation and multi-route decision semantics without weakening UNKNOWN refusal.",
+  "evidence_refs": [
+    "ISSUE_CONTRACT.md",
+    "machine/target-contract.json",
+    "machine/proof_receipt.json",
+    "machine/operability_receipt.json",
+    "machine/promotion_authority.json",
+    "tests/test_adversarial.py"
+  ],
+  "nonclaims": [
+    "not affiliated with Waymo",
+    "not a production autonomous-driving stack",
+    "canonical position is an estate role decision, not employer endorsement"
+  ]
+}
