@@ -2,24 +2,44 @@
   "schema": "glaciereq.repo-canonical-position.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
   "position_state": "RESOLVED",
-  "role": "company_specific_specialist_system",
+  "role": "CANONICAL_SPECIALIST",
   "company_target": "Waymo",
   "canonical_identity": "uncertainty-lane-graph",
+  "owns": "conflict_safe_uncertainty_aware_lane_topology_routing",
   "unique_value": [
-    "explicit FREE/UNKNOWN/BLOCKED lane-edge semantics",
+    "explicit FREE/UNKNOWN/BLOCKED directed-edge semantics",
+    "conflicting edge-state redefinitions fail closed",
     "default refusal to traverse UNKNOWN topology",
-    "repository-native adversarial uncertainty tests",
-    "cold-start operability and SHA-bound proof receipts"
+    "BLOCKED topology never routes",
+    "deterministic equal-hop routing independent of insertion order",
+    "explicit least-uncertain policy minimizes UNKNOWN edges before hops",
+    "path decision receipts bind exact topology and route policy"
   ],
   "capability_contribution": {
     "family": "uncertainty_aware_topology",
     "extractable_mechanisms": [
       "tri-state topology semantics",
+      "conflict-safe edge identity",
       "fail-closed unknown-edge routing",
-      "uncertainty-specific adversarial proof pattern"
+      "least-uncertain route ranking",
+      "topology-bound route receipts"
     ],
-    "ownership": "This repository remains the owning company-specific implementation unless a later evidence-backed canonical decision explicitly changes ownership."
+    "ownership": "This repository remains the owning uncertainty-topology implementation; extraction preserves identity and lineage."
   },
+  "does_not_own": [
+    "freespace certification",
+    "map or sensor provenance authentication",
+    "production trajectory planning authority",
+    "autonomous-driving actuation authority",
+    "Waymo affiliation or adoption"
+  ],
+  "relationships": [
+    {
+      "repository": "GlacierEQ/waymo-phantom-freespace-certificate",
+      "relationship": "complementary bounded-grid freespace specialist",
+      "integration_exercised": false
+    }
+  ],
   "integration_policy": {
     "preserve_repository_identity": true,
     "preserve_lineage": true,
@@ -28,18 +48,23 @@
     "absorption_requires_functional_equivalence": true,
     "absorption_requires_proof_equivalence": true
   },
-  "next_evolution": "Deepen uncertainty propagation and multi-route decision semantics without weakening UNKNOWN refusal.",
+  "proof": {
+    "source_sha": "e22e8a85d455cca69cfd40ebc7bcae0c2fedad07",
+    "workflow_run_id": 31404546209,
+    "jobs": ["py", "go"],
+    "result": "PASS"
+  },
+  "next_evolution": "Add versioned topology updates and provenance-attested edge observations without weakening conflict or UNKNOWN refusal semantics.",
   "evidence_refs": [
     "ISSUE_CONTRACT.md",
     "machine/target-contract.json",
+    "machine/canonical-position-proof.json",
     "machine/proof_receipt.json",
-    "machine/operability_receipt.json",
-    "machine/promotion_authority.json",
-    "tests/test_adversarial.py"
+    "machine/operability_receipt.json"
   ],
   "nonclaims": [
     "not affiliated with Waymo",
     "not a production autonomous-driving stack",
-    "canonical position is an estate role decision, not employer endorsement"
+    "estate canonical role does not raise the external claim ceiling beyond PROMOTED"
   ]
 }
