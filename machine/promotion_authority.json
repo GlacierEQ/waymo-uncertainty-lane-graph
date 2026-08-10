@@ -1,10 +1,11 @@
 {
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
-  "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
-  "proof_receipt_digest": "479ad881c94bd9388f1ceb1a01b04574ba1a87f6a8a3a7de373f57bcf13cc934",
-  "not_after": 1786347645.105215,
-  "mac": "124b6931853d8064847c7e405f6809fd0ebbb458fe635231ddd344e5244e8811",
+  "source_sha": "7145930b1de51f3a0286c8057da8b22f45103734c9bb092a68ef6c29be6908e8",
+  "proof_receipt_digest": "bdfc2beb8c5d16e8b5ce3eadab023e65a1d7c5f04f61b26964656969fa214d32",
+  "not_after": 1788927439.321225,
+  "mac": "9a6914bf17d4c0988b374f699db44868db3f2e7eb70b54e0b51ef26b68ff19e7",
   "issuer": "local_operator_promotion_authority",
-  "verified": true
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
 }

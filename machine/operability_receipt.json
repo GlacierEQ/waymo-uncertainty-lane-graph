@@ -1,19 +1,26 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
-  "at": "2026-08-09T07:40Z",
-  "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
+  "at": "2026-08-10T04:17Z",
+  "source_sha": "7145930b1de51f3a0286c8057da8b22f45103734c9bb092a68ef6c29be6908e8",
   "entry": "scripts/operate.py",
   "primary_output": {
+    "module": "lane_graph",
     "ok": true,
-    "path_when_allowed": [
-      "A",
-      "B",
-      "C"
-    ],
-    "unknown_refused": true
+    "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+    "smoke": {
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "shortest_path",
+      "name": "UncertaintyLaneGraph",
+      "result": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
   },
   "dual_run_ok": true,
-  "result": "PASS",
-  "scratch_launch_log": "wave_a/waymo-uncertainty-lane-graph/launch.log"
+  "result": "PASS"
 }

@@ -1,14 +1,15 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
-  "source_sha": "b5673616a829bb0c2258453988bb5aade2a65e1373370248ce74b71a3974886f",
-  "proof_id": "wave-a-residual-green-waymo-uncertainty-lane-graph-1786261245",
+  "source_sha": "7145930b1de51f3a0286c8057da8b22f45103734c9bb092a68ef6c29be6908e8",
+  "proof_id": "elite-waymo-uncertainty-lane-graph-1786335439",
   "environment": {
-    "python": "3.9.6",
-    "PYTHONPATH": "."
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "job-app/repos/waymo-uncertainty-lane-graph:job-app/repos/waymo-uncertainty-lane-graph/src",
+    "entry": "unittest"
   },
   "tests": [
-    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
@@ -23,9 +24,8 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T07:40Z",
+  "timestamp": "2026-08-10T04:17Z",
   "artifact_hashes": {
-    "operability_receipt": "65794d4b5967e07b35c54326bd25b009d58b4017145c9626243422ebfe72a4a2"
-  },
-  "scratch_proof_log": "wave_a/waymo-uncertainty-lane-graph/proof.log"
+    "operability_receipt": "63c1db0e14197c8d4f152272ae6e7b6f76a009d979604d659349167e92a440fd"
+  }
 }

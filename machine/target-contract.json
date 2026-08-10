@@ -1,6 +1,7 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
+<<<<<<< HEAD
     "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph"
   },
   "current": {
@@ -53,4 +54,24 @@
     "reference engineering system, not a production autonomous-driving deployment",
     "local promotion authority is not external employer or production authority"
   ]
+=======
+    "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph",
+    "family": "elite-estate"
+  },
+  "current": {
+    "state": "PROMOTED",
+    "implemented": true,
+    "tested": true,
+    "deployed": false
+  },
+  "nonclaims": [
+    "no employer affiliation",
+    "no production deployment without receipt"
+  ],
+  "donor_plan": {
+    "mode": "none",
+    "donors": []
+  },
+  "frozen_at": "2026-08-10T04:17Z"
+>>>>>>> ba6d08a (chore: Hyper Excellence Activation & structural matrix alignment)
 }
