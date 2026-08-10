@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.canonical-position-proof.v1",
+  "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
+  "source_sha": "e22e8a85d455cca69cfd40ebc7bcae0c2fedad07",
+  "workflow": {
+    "name": "tests",
+    "run_id": 31404546209,
+    "conclusion": "success",
+    "jobs": ["py", "go"]
+  },
+  "verified_invariants": [
+    "UNKNOWN edges are refused by default",
+    "BLOCKED edges never route",
+    "exact duplicate directed-edge declarations are idempotent",
+    "conflicting directed-edge state declarations fail closed",
+    "equal-hop route selection is deterministic across insertion order",
+    "unknown endpoints do not produce phantom paths",
+    "least-uncertain routing minimizes UNKNOWN-edge count before hops",
+    "Python path decisions bind exact topology and route policy",
+    "Python and Go preserve the same core routing outcomes",
+    "machine target contract is free of conflict markers"
+  ],
+  "claim_ceiling": "PROMOTED",
+  "claim_ceiling_reason": "estate canonicalization does not increase company/deployment claim authority",
+  "nonclaims": [
+    "no freespace certification",
+    "no sensor or map provenance authentication",
+    "no autonomous-driving actuation authority",
+    "no Waymo affiliation or adoption"
+  ]
+}

@@ -1,10 +1,12 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
-<<<<<<< HEAD
-    "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph"
+    "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph",
+    "family": "elite-estate",
+    "canonical_identity": "uncertainty-lane-graph"
   },
   "current": {
+    "state": "EVOLVING",
     "principal_state": "EVOLVING",
     "implemented": true,
     "tested": true,
@@ -12,66 +14,63 @@
     "operable": true,
     "proof_receipt_bound": true,
     "authority_bound": true,
-    "deployed": false
+    "deployed": false,
+    "canonical_position_resolved": true,
+    "external_claim_ceiling": "PROMOTED",
+    "exact_head_proof": {
+      "source_sha": "e22e8a85d455cca69cfd40ebc7bcae0c2fedad07",
+      "workflow_run_id": 31404546209,
+      "jobs": ["py", "go"],
+      "result": "PASS"
+    }
   },
   "target": {
-    "purpose": "Represent lane-topology uncertainty as an explicit engineering state so route selection cannot silently convert unknown map topology into free space.",
-    "central_bottleneck": "Path planning becomes unsafe or misleading when UNKNOWN topology is collapsed into traversable or blocked state without an explicit authority decision.",
+    "purpose": "Represent lane-topology uncertainty explicitly so route selection cannot silently collapse UNKNOWN into FREE or let conflicting edge declarations create order-dependent truth.",
+    "central_bottleneck": "Route semantics become misleading when topology state is mutable by insertion order or when uncertainty is discarded during path selection.",
     "success": [
       "Edges preserve FREE, UNKNOWN, and BLOCKED as distinct states.",
+      "Conflicting redefinitions of a directed edge fail closed.",
       "Default path search refuses UNKNOWN edges.",
-      "Adversarial tests exercise unsafe uncertainty collapse and refusal behavior.",
-      "A cold-start operator path reproduces behavior and emits a proof receipt.",
-      "The repository remains an independent Waymo-specialist system while reusable uncertainty semantics may be extracted with lineage preserved."
+      "BLOCKED edges never route.",
+      "Equal-hop route choice is deterministic across insertion order.",
+      "Explicit uncertainty-first routing minimizes UNKNOWN-edge count before hop count.",
+      "Path decisions bind exact graph identity and route policy.",
+      "Python and Go preserve the same core route outcomes."
     ]
   },
   "invariants": [
     "edge state is one of FREE, UNKNOWN, BLOCKED",
     "UNKNOWN is never treated as FREE by default",
-    "proof and promotion claims remain bound to repository-native evidence",
-    "company-specific identity is preserved when reusable capability is extracted"
+    "BLOCKED is never traversed",
+    "conflicting directed edge state fails closed",
+    "unknown endpoints cannot yield phantom paths",
+    "route choice is deterministic for a fixed topology and policy"
   ],
   "donor_plan": {
     "status": "RESOLVED",
     "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
     "donors": [],
-    "basis": "The current Go and Python lane-uncertainty mechanisms are repository-owned implementations; no donor implementation is required to define or operate the central mechanism.",
-    "future_extraction": "Reusable uncertainty-state semantics may be contributed upward only with source lineage, proof equivalence, and preservation of this repository's independent identity."
+    "siblings": ["GlacierEQ/waymo-phantom-freespace-certificate"],
+    "integration_exercised": false,
+    "basis": "This repository owns uncertainty-aware topology/routing; the freespace certificate owns bounded-grid certification and remains separate."
   },
   "promotion": {
-    "required_tests": [
-      "unit",
-      "adversarial",
-      "operability"
-    ],
+    "canonical_gate": "PASS",
+    "next_state": "EVOLVING",
+    "required_tests": ["python", "go", "adversarial", "canonical-position"],
     "require_exact_source_sha": true,
     "require_receipt": true,
-    "require_nonclaims": true
+    "require_nonclaims": true,
+    "next_cursor": "add_versioned_topology_updates_and_provenance_attested_edge_observations"
   },
   "canonical_position_ref": "machine/canonical-position.json",
   "nonclaims": [
-    "no Waymo affiliation",
+    "no Waymo affiliation or adoption",
     "reference engineering system, not a production autonomous-driving deployment",
-    "local promotion authority is not external employer or production authority"
-  ]
-=======
-    "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph",
-    "family": "elite-estate"
-  },
-  "current": {
-    "state": "PROMOTED",
-    "implemented": true,
-    "tested": true,
-    "deployed": false
-  },
-  "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
+    "no freespace certification or sensor-provenance authentication",
+    "no trajectory or autonomous-driving actuation authority",
+    "estate canonicalization does not raise the external claim ceiling above PROMOTED",
+    "no sibling integration without executable composition proof"
   ],
-  "donor_plan": {
-    "mode": "none",
-    "donors": []
-  },
-  "frozen_at": "2026-08-10T04:17Z"
->>>>>>> ba6d08a (chore: Hyper Excellence Activation & structural matrix alignment)
+  "frozen_at": "2026-08-10T15:39:00Z"
 }
