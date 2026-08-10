@@ -1,31 +1,56 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
-    "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph",
-    "local_path": "/Users/kcbflux/job-app/repos/waymo-uncertainty-lane-graph"
+    "repository_id": "GlacierEQ/waymo-uncertainty-lane-graph"
   },
   "current": {
-    "state": "VERTICAL_SLICE",
+    "principal_state": "EVOLVING",
     "implemented": true,
-    "tested": false,
+    "tested": true,
+    "adversarial_verified": true,
+    "operable": true,
+    "proof_receipt_bound": true,
+    "authority_bound": true,
     "deployed": false
   },
   "target": {
-    "purpose": "# ISSUE CONTRACT\n## Pain\nMaps are treated as truth; topology uncertainty is dropped.\n## Success\n- Edges have FREE/UNKNOWN/BLOCKED\n- Path search refuses UNKNOWN edges by default\n",
-    "central_bottleneck": "see ISSUE_CONTRACT"
+    "purpose": "Represent lane-topology uncertainty as an explicit engineering state so route selection cannot silently convert unknown map topology into free space.",
+    "central_bottleneck": "Path planning becomes unsafe or misleading when UNKNOWN topology is collapsed into traversable or blocked state without an explicit authority decision.",
+    "success": [
+      "Edges preserve FREE, UNKNOWN, and BLOCKED as distinct states.",
+      "Default path search refuses UNKNOWN edges.",
+      "Adversarial tests exercise unsafe uncertainty collapse and refusal behavior.",
+      "A cold-start operator path reproduces behavior and emits a proof receipt.",
+      "The repository remains an independent Waymo-specialist system while reusable uncertainty semantics may be extracted with lineage preserved."
+    ]
   },
-  "invariants": [],
+  "invariants": [
+    "edge state is one of FREE, UNKNOWN, BLOCKED",
+    "UNKNOWN is never treated as FREE by default",
+    "proof and promotion claims remain bound to repository-native evidence",
+    "company-specific identity is preserved when reusable capability is extracted"
+  ],
+  "donor_plan": {
+    "status": "RESOLVED",
+    "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
+    "donors": [],
+    "basis": "The current Go and Python lane-uncertainty mechanisms are repository-owned implementations; no donor implementation is required to define or operate the central mechanism.",
+    "future_extraction": "Reusable uncertainty-state semantics may be contributed upward only with source lineage, proof equivalence, and preservation of this repository's independent identity."
+  },
   "promotion": {
     "required_tests": [
       "unit",
-      "adversarial"
+      "adversarial",
+      "operability"
     ],
     "require_exact_source_sha": true,
     "require_receipt": true,
     "require_nonclaims": true
   },
+  "canonical_position_ref": "machine/canonical-position.json",
   "nonclaims": [
-    "no employer affiliation",
-    "reference implementation only"
+    "no Waymo affiliation",
+    "reference engineering system, not a production autonomous-driving deployment",
+    "local promotion authority is not external employer or production authority"
   ]
 }
