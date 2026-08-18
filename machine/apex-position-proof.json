@@ -1,5 +1,5 @@
 {
-  "schema": "glaciereq.canonical-position-proof.v1",
+  "schema": "glaciereq.apex-position-proof.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
   "source_sha": "e22e8a85d455cca69cfd40ebc7bcae0c2fedad07",
   "workflow": {
@@ -21,7 +21,7 @@
     "machine target contract is free of conflict markers"
   ],
   "claim_ceiling": "PROMOTED",
-  "claim_ceiling_reason": "estate canonicalization does not increase company/deployment claim authority",
+  "claim_ceiling_reason": "estate apexization does not increase company/deployment claim authority",
   "nonclaims": [
     "no freespace certification",
     "no sensor or map provenance authentication",

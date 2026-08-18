@@ -1,10 +1,10 @@
 {
-  "schema": "glaciereq.repo-canonical-position.v1",
+  "schema": "glaciereq.repo-apex-position.v1",
   "repository": "GlacierEQ/waymo-uncertainty-lane-graph",
   "position_state": "RESOLVED",
-  "role": "CANONICAL_SPECIALIST",
+  "role": "APEX_SPECIALIST",
   "company_target": "Waymo",
-  "canonical_identity": "uncertainty-lane-graph",
+  "apex_identity": "uncertainty-lane-graph",
   "owns": "conflict_safe_uncertainty_aware_lane_topology_routing",
   "unique_value": [
     "explicit FREE/UNKNOWN/BLOCKED directed-edge semantics",
@@ -58,13 +58,13 @@
   "evidence_refs": [
     "ISSUE_CONTRACT.md",
     "machine/target-contract.json",
-    "machine/canonical-position-proof.json",
+    "machine/apex-position-proof.json",
     "machine/proof_receipt.json",
     "machine/operability_receipt.json"
   ],
   "nonclaims": [
     "not affiliated with Waymo",
     "not a production autonomous-driving stack",
-    "estate canonical role does not raise the external claim ceiling beyond PROMOTED"
+    "estate apex role does not raise the external claim ceiling beyond PROMOTED"
   ]
 }
