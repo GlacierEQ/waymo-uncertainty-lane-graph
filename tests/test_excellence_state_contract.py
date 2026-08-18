@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 STATE_PATH = ROOT / "machine" / "excellence-state.json"
 TARGET_PATH = ROOT / "machine" / "target-contract.json"
-POSITION_PATH = ROOT / "machine" / "canonical-position.json"
+POSITION_PATH = ROOT / "machine" / "apex-position.json"
 
 PRINCIPAL_STATES = [
     "DISCOVERED",
@@ -35,7 +35,7 @@ STAGE_GATES = {
     "OPERABLE": "OPERABLE_AND_OBSERVABLE",
     "PROOF_REPRODUCED": "PROOF_RECEIPT_BOUND",
     "PROMOTED": "AUTHORITY_BOUND",
-    "CANONICAL": "CANONICAL_POSITION_RESOLVED",
+    "CANONICAL": "APEX_POSITION_RESOLVED",
     "EVOLVING": "EVOLUTION_CURSOR_DEFINED",
 }
 
@@ -69,7 +69,7 @@ class ExcellenceStateContractTests(unittest.TestCase):
         )
         self.assertEqual(self.target["donor_plan"]["status"], "RESOLVED")
 
-    def test_canonical_position_preserves_independent_identity(self):
+    def test_apex_position_preserves_independent_identity(self):
         self.assertEqual(self.position["position_state"], "RESOLVED")
         policy = self.position["integration_policy"]
         self.assertTrue(policy["preserve_repository_identity"])

@@ -15,11 +15,11 @@ def load(path: str):
     return json.loads(text)
 
 
-CANONICAL = load("machine/canonical-position.json")
+CANONICAL = load("machine/apex-position.json")
 CAPABILITIES = load("machine/capabilities.json")
 TARGET = load("machine/target-contract.json")
 STATE = load("machine/excellence-state.json")
-PROOF = load("machine/canonical-position-proof.json")
+PROOF = load("machine/apex-position-proof.json")
 
 
 class CanonicalPositionContractTests(unittest.TestCase):
@@ -56,7 +56,7 @@ class CanonicalPositionContractTests(unittest.TestCase):
         self.assertEqual(STATE["claim_ceiling"], "PROMOTED")
         self.assertEqual(TARGET["current"]["external_claim_ceiling"], "PROMOTED")
         self.assertEqual(
-            STATE["gates"]["CANONICAL_POSITION_RESOLVED"]["status"], "PASS"
+            STATE["gates"]["APEX_POSITION_RESOLVED"]["status"], "PASS"
         )
 
     def test_proof_binds_exact_tested_source_and_run(self):
